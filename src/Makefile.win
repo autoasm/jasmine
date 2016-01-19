@@ -1,0 +1,85 @@
+# Project: jasmin
+# Makefile created by Dev-C++ 4.9.6.0
+
+CC   = g++.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = bytecode.o classloader.o consoleformator.o constant.o constantfloat.o constantlong.o constantnameandtype.o constantref.o constantstring.o constantunicode.o constantutf8.o constclass.o constint.o deassembler.o fieldinfo.o genericattribute.o jasmin.o jclass.o jobject.o methodinfo.o toolkit.o $(RES)
+LIBS =  -L"D:/Dev-Cpp/lib" 
+INCS =  -I"D:/Dev-Cpp/include"  -I"D:/Dev-Cpp/include" 
+BIN  = jasmin.exe
+CFLAGS = $(INCS)  -g3
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before jasmin.exe all-after
+
+
+clean: clean-custom
+	rm -f $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(OBJ) -o "jasmin.exe" $(LIBS) $(CFLAGS)
+
+bytecode.o: bytecode.cpp
+	$(CC) -c bytecode.cpp -o bytecode.o $(CFLAGS)
+
+classloader.o: classloader.cpp
+	$(CC) -c classloader.cpp -o classloader.o $(CFLAGS)
+
+consoleformator.o: consoleformator.cpp
+	$(CC) -c consoleformator.cpp -o consoleformator.o $(CFLAGS)
+
+constant.o: constant.cpp
+	$(CC) -c constant.cpp -o constant.o $(CFLAGS)
+
+constantfloat.o: constantfloat.cpp
+	$(CC) -c constantfloat.cpp -o constantfloat.o $(CFLAGS)
+
+constantlong.o: constantlong.cpp
+	$(CC) -c constantlong.cpp -o constantlong.o $(CFLAGS)
+
+constantnameandtype.o: constantnameandtype.cpp
+	$(CC) -c constantnameandtype.cpp -o constantnameandtype.o $(CFLAGS)
+
+constantref.o: constantref.cpp
+	$(CC) -c constantref.cpp -o constantref.o $(CFLAGS)
+
+constantstring.o: constantstring.cpp
+	$(CC) -c constantstring.cpp -o constantstring.o $(CFLAGS)
+
+constantunicode.o: constantunicode.cpp
+	$(CC) -c constantunicode.cpp -o constantunicode.o $(CFLAGS)
+
+constantutf8.o: constantutf8.cpp
+	$(CC) -c constantutf8.cpp -o constantutf8.o $(CFLAGS)
+
+constclass.o: constclass.cpp
+	$(CC) -c constclass.cpp -o constclass.o $(CFLAGS)
+
+constint.o: constint.cpp
+	$(CC) -c constint.cpp -o constint.o $(CFLAGS)
+
+deassembler.o: deassembler.cpp
+	$(CC) -c deassembler.cpp -o deassembler.o $(CFLAGS)
+
+fieldinfo.o: fieldinfo.cpp
+	$(CC) -c fieldinfo.cpp -o fieldinfo.o $(CFLAGS)
+
+genericattribute.o: genericattribute.cpp
+	$(CC) -c genericattribute.cpp -o genericattribute.o $(CFLAGS)
+
+jasmin.o: jasmin.cpp
+	$(CC) -c jasmin.cpp -o jasmin.o $(CFLAGS)
+
+jclass.o: jclass.cpp
+	$(CC) -c jclass.cpp -o jclass.o $(CFLAGS)
+
+jobject.o: jobject.cpp
+	$(CC) -c jobject.cpp -o jobject.o $(CFLAGS)
+
+methodinfo.o: methodinfo.cpp
+	$(CC) -c methodinfo.cpp -o methodinfo.o $(CFLAGS)
+
+toolkit.o: toolkit.cpp
+	$(CC) -c toolkit.cpp -o toolkit.o $(CFLAGS)
